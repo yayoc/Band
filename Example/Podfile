@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Band_Example' do
+  pod 'Band', :path => '../'
+
+  target 'Band_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
