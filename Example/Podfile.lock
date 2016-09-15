@@ -1,0 +1,16 @@
+PODS:
+  - Band (0.1.0)
+
+DEPENDENCIES:
+  - Band (from `../`)
+
+EXTERNAL SOURCES:
+  Band:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Band: 3f721f771a8b041e994a7b9a175094dd04d43412
+
+PODFILE CHECKSUM: c9b44bda3ef459fe2367f0b0e44e3dcab8f92102
+
+COCOAPODS: 1.0.1

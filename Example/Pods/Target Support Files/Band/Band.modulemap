@@ -1,0 +1,6 @@
+framework module Band {
+  umbrella header "Band-umbrella.h"
+
+  export *
+  module * { export * }
+}
