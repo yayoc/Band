@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29E12DB9AA425BCF017B02C90C429CA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		338C5044973EB07AB69707B610828FDC /* ViewStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10CE5BF785131E6B7C39E4C7EF26E3A /* ViewStatus.swift */; };
+		338C5044973EB07AB69707B610828FDC /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10CE5BF785131E6B7C39E4C7EF26E3A /* ViewState.swift */; };
 		35158728155EC74FA304F065A2463877 /* Pods-Band_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA4B325F71606690BFBD6433D38DEC6E /* Pods-Band_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A5F7FE32D38810D736CBB713544C2D8 /* Pods-Band_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF02CA5016EEAF7FCCD570163352D5 /* Pods-Band_Tests-dummy.m */; };
 		5F5CFC181D8B88150079D079 /* BandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5CFC171D8B88150079D079 /* BandViewController.swift */; };
@@ -48,7 +48,7 @@
 		A3076B41CBCA54D5EE69714CF3BD1D71 /* Pods-Band_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Band_Tests.modulemap"; sourceTree = "<group>"; };
 		A36C7AE9954DC7D19BA23853A05099F4 /* Band-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Band-dummy.m"; sourceTree = "<group>"; };
 		A883031A7C8BE489AE70E9109340121A /* Band.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Band.modulemap; sourceTree = "<group>"; };
-		B10CE5BF785131E6B7C39E4C7EF26E3A /* ViewStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewStatus.swift; sourceTree = "<group>"; };
+		B10CE5BF785131E6B7C39E4C7EF26E3A /* ViewState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		BCFDCBD1C51D95FF46A712B21184E250 /* Pods-Band_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Band_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C120335374779D23D36D28BEC461D22C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CE3151B5B0C8F5277141E5099339FD /* Pods_Band_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Band_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +127,7 @@
 		43AB866DE582C863234812F922A3A2F2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B10CE5BF785131E6B7C39E4C7EF26E3A /* ViewStatus.swift */,
+				B10CE5BF785131E6B7C39E4C7EF26E3A /* ViewState.swift */,
 				5F5CFC171D8B88150079D079 /* BandViewController.swift */,
 			);
 			path = Classes;
@@ -358,7 +358,7 @@
 			files = (
 				5F5CFC181D8B88150079D079 /* BandViewController.swift in Sources */,
 				627F6940CFCF035520ED70CC4E08F59C /* Band-dummy.m in Sources */,
-				338C5044973EB07AB69707B610828FDC /* ViewStatus.swift in Sources */,
+				338C5044973EB07AB69707B610828FDC /* ViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
