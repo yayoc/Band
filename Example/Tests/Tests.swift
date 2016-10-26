@@ -5,8 +5,9 @@ import Band
 class Tests: XCTestCase {
     
     var states: [ViewState] = []
-    struct Unstable: ViewState {
-            var view: StateView = {
+    class Unstable: ViewState {
+        public var when: (() -> Bool)?
+        var view: StateView = {
                 return UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             }() as! StateView
         }
