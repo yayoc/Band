@@ -3,11 +3,11 @@
 /// the status property will be decided automatically as the struct name.
 /// Need to implement an custom view for this protocol.
 
-
 public protocol ViewState {
     var view: StateView { get }
     static var state: String { get }
     var state: String { get }
+    var when: (() -> Bool)? { get set }
 }
 
 /// return whether the two view states are equl.
@@ -34,10 +34,20 @@ extension ViewState {
             return String(reflecting: type(of: self)).components(separatedBy: ".")[1]
         }
     }
+    
+    public var when: (() -> Bool)? {
+        get { return nil }
+        set { newValue }
+    }
 }
 
 /// `StateView` class represents specific the view for View State protocol.
 /// This class will be used to distinguish between UIView and StateView when removing the view from the superview.
+
+public protocol HasViewModel {
+    associatedtype ViewModel
+    var viewModel: ViewModel? { get }
+}
 
 open class StateView: UIView { }
 
