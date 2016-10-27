@@ -10,4 +10,5 @@ import UIKit
 import Band
 
 class EmptyView: StateView {
+    @IBOutlet weak var messageLabel: UILabel!
 }

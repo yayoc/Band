@@ -17,6 +17,11 @@
 		5F5CFC2F1D8BA24B0079D079 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5CFC2E1D8BA24B0079D079 /* EmptyView.xib */; };
 		5F5CFC311D8BA2560079D079 /* UnstableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F5CFC301D8BA2560079D079 /* UnstableView.xib */; };
 		5F5CFC331D8BA2690079D079 /* UnstableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5CFC321D8BA2690079D079 /* UnstableView.swift */; };
+		5FD595621DC0404100D5AF07 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD595611DC0404100D5AF07 /* Member.swift */; };
+		5FD595641DC046D300D5AF07 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD595631DC046D300D5AF07 /* Reachability.swift */; };
+		5FD5956F1DC04AD500D5AF07 /* FailureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD5956E1DC04AD500D5AF07 /* FailureView.swift */; };
+		5FD595711DC04AEA00D5AF07 /* FailureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FD595701DC04AEA00D5AF07 /* FailureView.xib */; };
+		5FD595731DC04AF600D5AF07 /* Failure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD595721DC04AF600D5AF07 /* Failure.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -47,6 +52,11 @@
 		5F5CFC2E1D8BA24B0079D079 /* EmptyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		5F5CFC301D8BA2560079D079 /* UnstableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnstableView.xib; sourceTree = "<group>"; };
 		5F5CFC321D8BA2690079D079 /* UnstableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnstableView.swift; sourceTree = "<group>"; };
+		5FD595611DC0404100D5AF07 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		5FD595631DC046D300D5AF07 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		5FD5956E1DC04AD500D5AF07 /* FailureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FailureView.swift; sourceTree = "<group>"; };
+		5FD595701DC04AEA00D5AF07 /* FailureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FailureView.xib; sourceTree = "<group>"; };
+		5FD595721DC04AF600D5AF07 /* Failure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Failure.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Band_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Band_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +100,7 @@
 		5F5CFC191D8B9C940079D079 /* ViewStatus */ = {
 			isa = PBXGroup;
 			children = (
+				5FD595651DC0495E00D5AF07 /* Failure */,
 				5F5CFC241D8B9F040079D079 /* Unstable */,
 				5F5CFC231D8B9EFF0079D079 /* Empty */,
 				5F5CFC221D8B9EF40079D079 /* Loading */,
@@ -151,6 +162,24 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		5FD595651DC0495E00D5AF07 /* Failure */ = {
+			isa = PBXGroup;
+			children = (
+				5FD595661DC0496800D5AF07 /* View */,
+				5FD595721DC04AF600D5AF07 /* Failure.swift */,
+			);
+			name = Failure;
+			sourceTree = "<group>";
+		};
+		5FD595661DC0496800D5AF07 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5FD5956E1DC04AD500D5AF07 /* FailureView.swift */,
+				5FD595701DC04AEA00D5AF07 /* FailureView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +211,8 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				5FD595611DC0404100D5AF07 /* Member.swift */,
+				5FD595631DC046D300D5AF07 /* Reachability.swift */,
 			);
 			name = "Example for Band";
 			path = Band;
@@ -333,6 +364,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				5F5CFC281D8B9F380079D079 /* LoadingView.xib in Resources */,
 				5F5CFC311D8BA2560079D079 /* UnstableView.xib in Resources */,
+				5FD595711DC04AEA00D5AF07 /* FailureView.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				5F5CFC2F1D8BA24B0079D079 /* EmptyView.xib in Resources */,
@@ -450,9 +482,13 @@
 				5F5CFC211D8B9D320079D079 /* Unstable.swift in Sources */,
 				5F5CFC1F1D8B9CF00079D079 /* Empty.swift in Sources */,
 				5F5CFC1D1D8B9CE70079D079 /* Loading.swift in Sources */,
+				5FD595731DC04AF600D5AF07 /* Failure.swift in Sources */,
+				5FD595621DC0404100D5AF07 /* Member.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				5F5CFC2D1D8BA2400079D079 /* EmptyView.swift in Sources */,
+				5FD5956F1DC04AD500D5AF07 /* FailureView.swift in Sources */,
 				5F5CFC331D8BA2690079D079 /* UnstableView.swift in Sources */,
+				5FD595641DC046D300D5AF07 /* Reachability.swift in Sources */,
 				5F5CFC261D8B9F270079D079 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

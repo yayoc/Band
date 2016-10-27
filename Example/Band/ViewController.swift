@@ -11,8 +11,17 @@ import Band
 
 class ViewController: UIViewController, BandViewControllerDelegate {
     @IBOutlet weak var tableView: UITableView!
-    var states: [ViewState] = [Loading(), Empty(), Unstable()]
-    var data = [String]()
+    var data = [Member]()
+    
+    lazy var states: [ViewState] = {
+        let empty = Empty(when: { () -> Bool in
+            return self.isEmpty()
+        })
+        let unstable = Unstable(when: { () -> Bool in
+            return !Reachability.isConnectedToNetwork()
+        })
+        return [Loading(), empty, unstable]
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +30,23 @@ class ViewController: UIViewController, BandViewControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.show(state: Loading.state)
-        let when = DispatchTime.now() + 2
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            self.data = ["Levon Helm", "Robbie Robertson", "Rick Danko", " Garth Hudson", "Richard Manuel"]
+        Member.members { [unowned self] (members, error) in
+            let failure = Failure(when: { () -> Bool in
+                    return error != nil
+                }, model: error)
+            self.states.append(failure)
+            self.data = members
             self.tableView.reloadData()
-            self.hideAll()
+            self.updateViewIfNeeded([Unstable.state, Empty.state, Failure.state])
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func isEmpty() -> Bool {
+        return data.count == 0
     }
 }
 
@@ -41,7 +57,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath)
-        cell.textLabel?.text = data[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = data[(indexPath as NSIndexPath).row].name
         return cell
     }
 }

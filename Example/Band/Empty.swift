@@ -10,7 +10,8 @@ import Foundation
 import Band
 
 struct Empty: ViewState {
-    var view: StateView = {
+    let view: StateView = {
         return UnstableView.loadFromNibNamed(nibNamed: "EmptyView")!
     }()
+    var when: (() -> Bool)?
 }
