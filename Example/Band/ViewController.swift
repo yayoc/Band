@@ -29,7 +29,7 @@ class ViewController: UIViewController, BandViewControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.show(state: Loading.state)
+        self.show(Loading.state)
         Member.members { [unowned self] (members, error) in
             let failure = Failure(when: { () -> Bool in
                     return error != nil

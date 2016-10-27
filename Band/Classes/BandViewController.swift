@@ -40,7 +40,7 @@ public extension BandViewControllerDelegate where Self: UIViewController {
     /// New view will adjust the screen size by using autresizingMask.
     /// Before showing new view, this method will remove all of StateView from superview.
     
-    func show(state: String) {
+    func show(_ state: String) {
         self.hideAll()
         if let newState: ViewState = self[state] {
             let newView = newState.view
@@ -66,7 +66,7 @@ public extension BandViewControllerDelegate where Self: UIViewController {
                continue
             }
             if (when()) {
-                show(state: state.state)
+                show(state.state)
                 break
             }
         }
@@ -82,7 +82,7 @@ public extension BandViewControllerDelegate where Self: UIViewController {
                     continue
                 }
                 if (when()) {
-                    show(state: state.state)
+                    show(state.state)
                     break
                 }
             }
